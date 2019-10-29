@@ -90,6 +90,18 @@ public final class UrisSchemeFactory {
      */
     public static UrisScheme forHost(@Nonnull String host) {
         try {
+            if (host.equals("lod.enslaved.org")) {
+              return new DefaultUrisScheme(new URI("https://" + host),
+                    WIKIBASE_ENTITY_PREFIX, WIKIBASE_ENTITY_DATA_PREFIX, WIKIBASE_INITIALS);
+            }
+            if (host.equals("lod.dev.matrix.msu.edu")) {
+              return new DefaultUrisScheme(new URI("https://" + host),
+                    WIKIBASE_ENTITY_PREFIX, WIKIBASE_ENTITY_DATA_PREFIX, WIKIBASE_INITIALS);
+            }
+            if (host.equals("raul.dev.matrix.msu.edu")) {
+              return new DefaultUrisScheme(new URI("https://" + host),
+                    WIKIBASE_ENTITY_PREFIX, WIKIBASE_ENTITY_DATA_PREFIX, WIKIBASE_INITIALS);
+            }
             return new DefaultUrisScheme(new URI("http://" + host),
                     WIKIBASE_ENTITY_PREFIX, WIKIBASE_ENTITY_DATA_PREFIX, WIKIBASE_INITIALS);
         } catch (URISyntaxException e) {

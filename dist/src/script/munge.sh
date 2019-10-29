@@ -41,5 +41,5 @@ fi
 
 CP=`dirname $BASH_SOURCE`/lib/wikidata-query-tools-*-jar-with-dependencies.jar
 MAIN=org.wikidata.query.rdf.tool.Munge
-java -cp $CP $MAIN --from $FROM --to $LOCATION/$FORMAT $ARGS --chunkSize $CHUNK "$@"
+java -cp $CP $MAIN --from $FROM --to $LOCATION/$FORMAT $ARGS -w lod.enslaved.org --chunkSize $CHUNK "$@"
 

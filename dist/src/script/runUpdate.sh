@@ -48,6 +48,8 @@ do
     S) NO_SERVICE=1;;
     N) NOEXTRA=1;;
     v) VERBOSE_LOGGING="true";;
+    W) WBBASEURL=${OPTARG};;
+    U) WBCONCEPTURI=${OPTARG};;
   esac
 done
 
@@ -75,6 +77,14 @@ fi
 if [ ! -z "$SKIPSITE" ]; then
     ARGS="$ARGS --skipSiteLinks"
 fi
+
+if [ ! -z "$WBBASEURL" ]; then
+    ARGS="$ARGS -W $WBBASEURL"
+fi
+if [ ! -z "$WBCONCEPTURI" ]; then
+    ARGS="$ARGS -U $WBCONCEPTURI"
+fi
+
 LOG_OPTIONS=""
 # if not running as a service, use the default log file
 if [ ! -z "$NO_SERVICE" ]; then
