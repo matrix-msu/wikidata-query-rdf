@@ -66,7 +66,7 @@
         <!-- matching version used by Blazegraph here -->
         <jackson.version>2.6.7</jackson.version>
         <!-- matching version used by Blazegraph here -->
-        <jetty.version>9.4.12.v20180830</jetty.version>
+        <jetty.version>9.4.54.v20240208</jetty.version>
         <logback.version>1.2.3</logback.version>
         <metrics.version>4.0.2</metrics.version>
         <!-- matching version used by Blazegraph here -->
